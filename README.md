@@ -16,7 +16,7 @@ _Note: you can change `~/ros_workspace/` to any path you would like._
 
 ### Download the IS4S ESR project with the rosinstall file:
 
-    rosinstall $ROS_WORKSPACE "https://raw.github.com/GAVLab/is4s_esr_ros/master/is4s_esr.rosinstall"
+    rosinstall $ROS_WORKSPACE "https://raw.github.com/GAVLab/is4s_ros_pkg/master/is4s_esr.rosinstall"
     source setup.bash
 
 ### Build the IS4S ESR project:
