@@ -25,7 +25,7 @@ _Note: you can change `~/ros_workspace/` to any path you would like._
     
     patch $ROS_WORKSPACE/rosjava_core/rosjava_bootstrap/android.xml rosjava_core.patch
     
-#### Build apps (use --threads=1 to prevent an error from a race condition http://code.google.com/p/rosjava/issues/detail?id=63):
+#### Build apps (use --threads=1 to prevent an error from a race condition http://code.google.com/p/rosjava/issues/detail?id=63 ):
 
     rosmake rosjava_core --threads=1
     rosmake appmanandroid
