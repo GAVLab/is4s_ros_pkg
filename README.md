@@ -14,7 +14,12 @@ _Note: you can change `~/ros_workspace/` to any path you would like._
 
     source setup.bash
 
-### Download and install ROS-Android dependencies (see http://www.ros.org/wiki/ApplicationsPlatform/Clients/Android ): 
+### Download and install ROS-Android dependencies (see http://www.ros.org/wiki/ApplicationsPlatform/Clients/Android ):
+####install rosinstall:
+
+    sudo apt-get install python-setuptools
+    sudo easy_install -U rosinstall
+
 
 #### Download rosjava, rosjava.android, appmanandroid, and example apps
 
