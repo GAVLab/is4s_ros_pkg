@@ -14,4 +14,4 @@
 - hg: {local-name: android_voice_recognition, uri: 'https://kforge.ros.org/appmanandroid/voice_recoghg'}
 - hg: {local-name: appmanwx, uri: 'https://kforge.ros.org/appmanandroid/appmanwx'}
 - hg: {local-name: turtlebot, uri: 'https://kforge.ros.org/turtlebot/turtlebot'}
-- git: {'local-name': 'is4s_esr_ros', 'uri': 'git://github.com/GAVLab/is4s_esr_ros.git', 'version': 'master'}
+- git: {'local-name': 'is4s_esr_ros', 'uri': 'https://davidhodo@github.com/GAVLab/is4s_esr_ros.git', 'version': 'master'}
