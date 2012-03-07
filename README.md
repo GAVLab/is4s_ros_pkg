@@ -15,30 +15,33 @@ _Note: you can change `~/ros_workspace/` to any path you would like._
     source setup.bash
 
 ### Download and install ROS-Android dependencies (see http://www.ros.org/wiki/ApplicationsPlatform/Clients/Android ):
-####install rosinstall:
+#### Install rosinstall (if not already install):
 
     sudo apt-get install python-setuptools
     sudo easy_install -U rosinstall
 
+#### Download IS4S ROS code, rosjava, rosjava.android, appmanandroid, and example apps
 
-#### Download rosjava, rosjava.android, appmanandroid, and example apps
-
-    rosinstall $ROS_WORKSPACE https://kforge.ros.org/appmanandroid/hg/raw-file/tip/appman.rosinstall
+    rosinstall $ROS_WORKSPACE "https://raw.github.com/GAVLab/is4s_ros_pkg/master/android_all.rosinstall"
     source setup.bash
-    
-#### Download patch from http://code.google.com/p/rosjava/issues/detail?id=76 and apply:     
-    
-    patch $ROS_WORKSPACE/rosjava_core/rosjava_bootstrap/android.xml rosjava_core.patch
     
 #### Build apps (use --threads=1 to prevent an error from a race condition http://code.google.com/p/rosjava/issues/detail?id=63 ):
 
     rosmake rosjava_core --threads=1
-    rosmake appmanandroid
+    rosmake android_app_chooser --threads=1
+    rosmake android_teleop --threads=1
 
-### Download the IS4S ESR project with the rosinstall file:
-
-    rosinstall $ROS_WORKSPACE "https://raw.github.com/GAVLab/is4s_ros_pkg/master/is4s_esr.rosinstall"
-    source setup.bash
 
 ### Build the IS4S ESR project:
 
+    rosmake is4s_esr_teleop --threads=1
+
+## Running the applications:
+
+### Start the emulator:
+
+    emulator -avd 'AVD_NAME'
+
+### Install the compiled app (*.apk) to the emulator:
+
+    adb install APP_NAME.apk
