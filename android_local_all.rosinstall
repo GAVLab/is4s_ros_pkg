@@ -1,0 +1,6 @@
+# This repo holds the ROS packages for the is4s esr robot and ocu
+- other: {local-name: /opt/ros/electric/ros}
+- other: {local-name: /opt/ros/electric/stacks}
+- hg: {local-name: turtlebot, uri: 'https://kforge.ros.org/turtlebot/turtlebot'}
+- git: {'local-name': 'is4s_esr_ros', 'uri': 'git://github.com/GAVLab/is4s_esr_ros.git', 'version': 'master'}
+- git: {'local-name': './', 'uri': 'git://github.com/GAVLab/ros_java_android.git', 'version': 'master'}
