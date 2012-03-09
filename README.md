@@ -24,11 +24,16 @@ _Note: you can change `~/ros_workspace/` to any path you would like._
 
     rosinstall $ROS_WORKSPACE "https://raw.github.com/GAVLab/is4s_ros_pkg/master/android_all.rosinstall"
     source setup.bash
+
+#### Patch rosjava_core
+
+    roscd is4s_esr_android/mods
+    ./apply_patch
+
     
 #### Build apps (use --threads=1 to prevent an error from a race condition http://code.google.com/p/rosjava/issues/detail?id=63 ):
 
     rosmake rosjava_core --threads=1
-    rosmake android_app_chooser --threads=1
     rosmake android_teleop --threads=1
 
 
